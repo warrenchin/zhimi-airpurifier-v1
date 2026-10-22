@@ -56,6 +56,26 @@ Poll interval: 30 s. Config flow: device IP + miio token (+ name).
 
 ## Install
 
+### HACS (recommended)
+
+This integration is not in the HACS default store yet, so add it as a
+custom repository:
+
+1. In Home Assistant, open **HACS → Integrations**.
+2. Top-right **⋮ menu → Custom repositories**.
+3. Repository: `https://github.com/warrenchin/zhimi-airpurifier-v1`,
+   Category: **Integration** → **Add**.
+4. Find **"Zhimi Air Purifier V1 (Mochi)"** in the list and
+   **Download** it.
+5. Restart Home Assistant, then **Settings → Devices & Services →
+   Add Integration → "Zhimi Air Purifier V1 (Mochi)"** and enter the
+   device's IP address and miio token.
+
+Or use the one-click redirect:
+[Open in HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=warrenchin&repository=zhimi-airpurifier-v1&category=integration)
+
+### Manual
+
 Copy `custom_components/mochi_zhimi_v1` into HA's
 `config/custom_components/`, restart HA, then
 Settings → Devices & Services → Add Integration →
@@ -67,15 +87,17 @@ manifest; HA installs it automatically).
 This integration stands on the Xiaomi miIO ecosystem's shoulders, and
 the credit belongs upstream:
 
-- **Teemu Rytilahti (rytilahti)** — author of `python-miio`, the
+- **Teemu Rytilahti (rytilahti)** — author of
+  [python-miio](https://github.com/rytilahti/python-miio), the
   library every miIO integration (this one included) talks through.
-- **syssi** — author of the original `xiaomi_airpurifier` Home
+- **syssi** — author of the original
+  [xiaomi_airpurifier](https://github.com/syssi/xiaomi_airpurifier) Home
   Assistant integration, the lineage this device support descends from.
-- **dzerik** — author of `xiaomi_airpurifier_ng`
-  (https://github.com/dzerik/xiaomi_airpurifier_ng), the maintained fork
-  of syssi's work whose local readouts (motor speeds, illuminance)
-  showed what this hardware can honestly report, and against which this
-  integration was compared during development.
+- **dzerik** — author of
+  [xiaomi_airpurifier_ng](https://github.com/dzerik/xiaomi_airpurifier_ng),
+  the maintained fork of syssi's work whose local readouts (motor
+  speeds, illuminance) showed what this hardware can honestly report,
+  and against which this integration was compared during development.
 
 License: Apache License 2.0, matching the upstream lineage (the full
 license text ships in `LICENSE` in the published repository).
