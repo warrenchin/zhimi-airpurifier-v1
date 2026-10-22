@@ -1,0 +1,1 @@
+{"config_flow":true,"documentation":"https://github.com/warrenchin/zhimi-airpurifier-v1","issue_tracker":"https://github.com/warrenchin/zhimi-airpurifier-v1/issues","domain":"mochi_zhimi_v1","iot_class":"local_polling","name":"Zhimi Air Purifier V1 (Mochi)","requirements":["python-miio>=0.5.12,<1.0.0"],"version":"1.0.0"}
